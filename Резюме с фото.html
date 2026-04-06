@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Галина Данилкина — финансовый контролер, эксперт FP&A. 16 лет опыта.">
+  <title>Галина Данилкина | Финансовый контролер & FP&A</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      color: #1e2f3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    /* Градиент только синий + зелёный (без желтого) */
+    .gradient-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #1e3b5c, #2c9b7c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      color: #1e3b5c;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #2c9b7c;
+      border-radius: 4px;
+    }
+
+    /* Карточки навыков */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .skill-card {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1.8rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+      border-color: #e0edf2;
+    }
+    .skill-icon {
+      font-size: 2rem;
+      color: #2c9b7c;
+      margin-bottom: 1rem;
+    }
+    .skill-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #1e3b5c;
+    }
+    .skill-card p {
+      color: #4a627a;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    /* Кейсы */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+    .case-block {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #2c9b7c;
+      transition: 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .case-block:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    .case-block h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .case-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2c9b7c;
+      margin: 0.5rem 0;
+    }
+
+    /* Теги */
+    .tools-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+    .tag {
+      background: #eaf4f0;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e5a6e;
+      transition: all 0.2s;
+    }
+    .tag:hover {
+      background: #2c9b7c;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.8);
+      z-index: 100;
+      border-bottom: 1px solid #e2edf2;
+      padding: 1rem 0;
+    }
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      background: linear-gradient(135deg, #1e3b5c, #2c9b7c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Hero с фотографией в правом верхнем углу */
+    .hero {
+      position: relative;
+      padding: 4rem 0 3rem;
+      background: linear-gradient(120deg, #ffffff, #f8fafd);
+    }
+    .hero-content {
+      max-width: 60%;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #e0f0e8;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2c9b7c;
+      margin-bottom: 1.2rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e3b5c;
+    }
+    .hero-description {
+      font-size: 1rem;
+      color: #3a5a74;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    /* Фотография без четких контуров, в правом верхнем углу */
+    .hero-photo {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 280px;
+      z-index: 2;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .hero-photo img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Адаптив: на мобильных фото не перекрывает текст, становится под заголовком */
+    @media (max-width: 900px) {
+      .hero {
+        padding-top: 2rem;
+      }
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+      }
+      .hero-photo {
+        position: static;
+        margin: 2rem auto 0;
+        width: 240px;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .hero-description {
+        max-width: 100%;
+        text-align: center;
+      }
+      .section-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .section-title {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gradient-title {
+        font-size: 2rem;
+      }
+      .hero-photo {
+        width: 200px;
+      }
+    }
+
+    /* Форма */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 40px;
+      border: 1px solid #dce5ec;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .form-group textarea {
+      border-radius: 1rem;
+      resize: vertical;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #2c9b7c;
+      box-shadow: 0 0 0 3px rgba(44,155,124,0.1);
+    }
+    .btn-submit {
+      background: #2c9b7c;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .btn-submit.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .btn-submit.active:hover {
+      background: #1e7a62;
+      transform: translateY(-2px);
+    }
+    .message-status {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .error-status { color: #c95a5a; }
+    .success-status { color: #2c9b7c; }
+
+    .contact-block {
+      background: white;
+      border-radius: 1.8rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    footer {
+      background: #0f212e;
+      color: #a0bbcc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">Galina Danilkina | Financial Control</div>
+      <a href="#contact" style="text-decoration: none; background:#2c9b7c; color:white; padding:0.4rem 1.2rem; border-radius:40px; font-weight:500;">Связаться</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero с фотографией в правом верхнем углу -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge"><i class="fas fa-chart-line"></i> 16 лет экспертизы</div>
+          <h1 class="gradient-title">Галина Данилкина<br>Финансовый контролер & FP&A</h1>
+          <p class="hero-description">Управление бюджетами CAPEX/OPEX, автоматизация отчетности, снижение рисков и повышение точности прогнозов для EPC-проектов и крупных корпораций.</p>
+          <div class="hero-stats">
+            <div><span class="stat-number">130+ млрд ₽</span><br>под контролем CAPEX</div>
+            <div><span class="stat-number">521 млн ₽</span><br>снижение ДЗ</div>
+            <div><span class="stat-number">4 млрд ₽</span><br>сопровождение договоров</div>
+          </div>
+        </div>
+      </div>
+      <!-- Фотография без круга, с плавными углами, в правом верхнем углу -->
+      <div class="hero-photo">
+        <img src="IMG_7781.jpeg" alt="Галина Данилкина">
+      </div>
+    </div>
+
+    <!-- Компетенции -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Ключевые компетенции</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>FP&A & Бюджетирование</h3>
+            <p>План-факт, факторный анализ, прогнозирование P&L, Cash Flow, EBITDA. Бюджеты CAPEX/OPEX.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Управленческий учет</h3>
+            <p>Консолидация РСБУ/МСФО, настройка управленческой отчетности в SAP, 1С, BI.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h3>Автоматизация & BI</h3>
+            <p>Qlik Sense, Power BI, Power Pivot/Query — сокращение времени закрытия отчетности до 40%.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <h3>Контроль рисков и ДЗ</h3>
+            <p>Управление дебиторской задолженностью, банковские гарантии, досудебное урегулирование.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Кейсы -->
+    <section style="background: #f9fbfd;">
+      <div class="container">
+        <h2 class="section-title">Результативные кейсы</h2>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4><i class="fas fa-chart-line"></i> Снижение дебиторской задолженности</h4>
+            <div class="case-value">521 млн ₽</div>
+            <p>Регламент вовлечения невостребованных МТР в оборот — сокращение долгосрочной ДЗ.</p>
+          </div>
+          <div class="case-block">
+            <h4><i class="fas fa-gavel"></i> Возврат безнадежного долга</h4>
+            <div class="case-value">полное погашение</div>
+            <p>Досудебное взыскание задолженности подрядчика с истекающим сроком исковой давности.</p>
+          </div>
+          <div class="case-block">
+            <h4><i class="fas fa-award"></i> Цифровая трансформация</h4>
+            <div class="case-value">Лучший эксперт SAP</div>
+            <p>Настройка системы под бизнес-процессы капстроительства, обучение подразделений.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Технологии -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Инструменты & технологии</h2>
+        <div class="tools-tags">
+          <span class="tag">SAP ERP / BI</span><span class="tag">1C:ERP</span><span class="tag">Qlik Sense</span>
+          <span class="tag">Power BI</span><span class="tag">Excel Power Pivot/Query</span><span class="tag">SQL</span>
+          <span class="tag">AI-инструменты</span><span class="tag">ЭТП Газпромбанка</span><span class="tag">P&L, Cash Flow</span><span class="tag">МСФО</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Опыт (таймлайн) -->
+    <section style="background: #f9fbfd;">
+      <div class="container">
+        <h2 class="section-title">Карьерный путь</h2>
+        <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+          <div style="background: white; border-radius: 1rem; padding: 1.2rem;">
+            <div style="font-weight:600; color:#2c9b7c;">2025 — н.в.</div>
+            <div style="font-weight:700;">НИПИГАЗ — Эксперт по планированию и контролю бюджета ЕРС</div>
+            <p>Бюджетирование Амурский ГХК, ДГП-2. Внедрение Qlik Sense, факторный анализ выручки.</p>
+          </div>
+          <div style="background: white; border-radius: 1rem; padding: 1.2rem;">
+            <div style="font-weight:600; color:#2c9b7c;">2024-2025</div>
+            <div style="font-weight:700;">Газпром трансгаз Москва — Главный специалист ПЭУ</div>
+            <p>План-факт, автоматизация тарифов в SAP BI, координация 5 ЦФО, трансформация РСБУ→МСФО.</p>
+          </div>
+          <div style="background: white; border-radius: 1rem; padding: 1.2rem;">
+            <div style="font-weight:600; color:#2c9b7c;">2010-2023</div>
+            <div style="font-weight:700;">Газпром трансгаз Москва — Управление инвестициями (CAPEX)</div>
+            <p>Бюджеты капстроительства, контроль ДЗ, банковское сопровождение, внедрение SAP.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты и форма -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-block">
+          <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+            <div style="flex: 1;">
+              <h2 class="section-title" style="margin-bottom: 0.5rem;">Свяжитесь со мной</h2>
+              <p style="margin: 1rem 0; color: #3a5a74;">Обсудим финансовую модель, бюджет проекта или автоматизацию отчетности.</p>
+              <div><i class="fas fa-phone-alt" style="color:#2c9b7c; width: 2rem;"></i> +7 (919) 774-43-93</div>
+              <div><i class="fas fa-envelope" style="color:#2c9b7c; width: 2rem;"></i> gerdagalina@yandex.ru</div>
+              <div><i class="fas fa-map-marker-alt" style="color:#2c9b7c; width: 2rem;"></i> Москва / Коммунарка</div>
+            </div>
+            <div style="flex: 1.2;">
+              <form id="contactForm" style="background: #ffffff; padding: 1.2rem; border-radius: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div class="form-group">
+                  <input type="text" id="userName" placeholder="Ваше имя *">
+                </div>
+                <div class="form-group">
+                  <input type="email" id="userEmail" placeholder="Ваш Email *">
+                </div>
+                <div class="form-group">
+                  <textarea id="userMessage" rows="3" placeholder="Сообщение *"></textarea>
+                </div>
+                <button type="button" id="submitBtn" class="btn-submit">Отправить сообщение</button>
+                <div id="formStatus" class="message-status"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Галина Данилкина — Финансовый контролер, эксперт FP&A.</p>
+    </div>
+  </footer>
+
+  <!-- EmailJS (заглушка, для работы замените ключи) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ========== НАСТРОЙКИ EMAILJS (замените на свои) ==========
+    const EMAILJS_PUBLIC_KEY = "ВАШ_PUBLIC_KEY";
+    const SERVICE_ID = "ВАШ_SERVICE_ID";
+    const TEMPLATE_ID = "ВАШ_TEMPLATE_ID";
+    // ==========================================================
+
+    let emailjsInitialized = false;
+    if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== "ВАШ_PUBLIC_KEY") {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      emailjsInitialized = true;
+    }
+
+    const nameInput = document.getElementById('userName');
+    const emailInput = document.getElementById('userEmail');
+    const messageInput = document.getElementById('userMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusDiv = document.getElementById('formStatus');
+
+    function checkFormValidity() {
+      const isValid = nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+      if (isValid) submitBtn.classList.add('active');
+      else submitBtn.classList.remove('active');
+    }
+
+    function isEmailAlreadySent(email) {
+      const sent = JSON.parse(localStorage.getItem('sent_emails')) || [];
+      return sent.includes(email);
+    }
+
+    function markEmailAsSent(email) {
+      const sent = JSON.parse(localStorage.getItem('sent_emails')) || [];
+      if (!sent.includes(email)) {
+        sent.push(email);
+        localStorage.setItem('sent_emails', JSON.stringify(sent));
+      }
+    }
+
+    function resetForm() {
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+      checkFormValidity();
+    }
+
+    async function sendEmail(e) {
+      e.preventDefault();
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const message = messageInput.value.trim();
+
+      if (!name || !email || !message) {
+        statusDiv.innerHTML = '<span class="error-status">❌ Заполните все поля</span>';
+        return;
+      }
+      if (isEmailAlreadySent(email)) {
+        statusDiv.innerHTML = '<span class="error-status">⚠️ Вы уже отправляли сообщение с этого адреса</span>';
+        return;
+      }
+      if (!emailjsInitialized) {
+        statusDiv.innerHTML = '<span class="error-status">❌ EmailJS не настроен (замените ключи в коде)</span>';
+        return;
+      }
+
+      submitBtn.textContent = 'Отправка...';
+      submitBtn.disabled = true;
+
+      try {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, { name, email, message, to_email: 'gerdagalina@yandex.ru' });
+        statusDiv.innerHTML = '<span class="success-status">✅ Сообщение отправлено! Я свяжусь с вами.</span>';
+        markEmailAsSent(email);
+        resetForm();
+      } catch (error) {
+        statusDiv.innerHTML = '<span class="error-status">❌ Ошибка отправки. Попробуйте позже или напишите на почту.</span>';
+      } finally {
+        submitBtn.textContent = 'Отправить сообщение';
+        submitBtn.disabled = false;
+        checkFormValidity();
+      }
+    }
+
+    nameInput.addEventListener('input', checkFormValidity);
+    emailInput.addEventListener('input', checkFormValidity);
+    messageInput.addEventListener('input', checkFormValidity);
+    submitBtn.addEventListener('click', sendEmail);
+    checkFormValidity();
+  </script>
+</body>
+</html>
